@@ -12,7 +12,13 @@ find_package( X11 REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 include_directories( ${X11_INCLUDE_DIRS} )
 
-add_executable(screenshot src/main.cpp)
+set(SOURCE_FILES 
+  src/main.cpp
+  src/screenshot.cpp
+  )
+
+
+add_executable(screenshot ${SOURCE_FILES})
 
 target_link_libraries( screenshot ${OpenCV_LIBS} ${X11_LIBRARIES} )
 
