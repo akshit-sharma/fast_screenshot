@@ -1,4 +1,7 @@
+
 #include "screenshot.h"
+
+#include <iostream>
 
 ScreenShot::ScreenShot() :
   init(true)
@@ -18,7 +21,7 @@ ScreenShot::ScreenShot() :
 }
 
 ScreenShot::ScreenShot(int x, int y, int width, int height) : 
-  x(x), y(y), width(width), height(height)
+  x(x), y(y), width(width), height(height), init(true)
 {
   display = XOpenDisplay(nullptr);
   if (!display) {
@@ -30,8 +33,6 @@ ScreenShot::ScreenShot(int x, int y, int width, int height) :
     std::cout << "root is null\n";
     exit(1);
   }
-  init = true;
-  // ScreenShot();
 }
 
 ScreenShot::~ScreenShot() 
