@@ -6,7 +6,6 @@
 ScreenShot::ScreenShot() :
   init(true)
 {
-
   display = XOpenDisplay(nullptr);
   if (!display) {
     std::cout << "display is null\n";
@@ -47,7 +46,6 @@ void ScreenShot::operator() (cv::Mat &cvImg)
 {
   if (!init) {
     XDestroyImage(img);
-    // init = true;
   }
 
   init = (init == true) ? false : init;
