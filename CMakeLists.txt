@@ -8,7 +8,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package( OpenCV REQUIRED )
 find_package( X11 REQUIRED )
-
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 include_directories( ${X11_INCLUDE_DIRS} )
 
@@ -19,7 +18,6 @@ set(SOURCE_FILES
 set(SIMPLE_FILE
   src/simple.cpp
   )
-
 
 add_executable(screenshot src/main.cpp ${SOURCE_FILES})
 add_executable(simple src/simple.cpp)

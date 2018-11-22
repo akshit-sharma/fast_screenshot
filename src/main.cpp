@@ -13,7 +13,7 @@ int main () {
 
   cv::namedWindow("img", cv::WINDOW_AUTOSIZE);
 
-  int key, frames = 0, deltaTime = 0, micro2sec = 1000 * 1000;
+  int key = 'c', frames = 0, deltaTime = 0, micro2sec = 1000 * 1000;
   std::chrono::high_resolution_clock::time_point t1, t2;
 
   while(true) {

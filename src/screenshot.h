@@ -1,18 +1,25 @@
 #pragma once
 
+#if defined(__linux__)
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
+#else
+#endif
 
 #include <opencv2/opencv.hpp>
 
 class ScreenShot {
 
   private:
+#if defined(__linux__)
     Display *display;
     Window root;
-    int x, y, width, height;
     XImage *img;
+#else
+
+#endif
  
+    int x, y, width, height;
     bool init;
 
     ScreenShot();
