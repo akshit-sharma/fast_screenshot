@@ -30,8 +30,6 @@ int main () {
     t2 = std::chrono::high_resolution_clock::now();
 
     auto diff = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1).count();
-
-    // std::cout << "Time spent : " << diff << " \n";
     
     deltaTime += diff;
     frames++;
